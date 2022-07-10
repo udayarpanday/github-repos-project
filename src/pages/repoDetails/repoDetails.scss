@@ -7,7 +7,7 @@
       width: 30%;
       &:last-child {
         width: 70%;
-        min-height: 460px;
+        min-height: 470px;
       }
       h5 {
         padding: 0;
@@ -17,14 +17,21 @@
 }
 
 .user-details-section{
-  text-align: center;
   .user-image{
     img{
       border-radius: 50%;
       border: 2px solid $primaryGrayColor;
     }
   }
-  h3{
+  .user-name{
+    text-align: center;
+  }
+  .user-link{
+    a{
+      text-decoration: underline;
+    }
+  }
+  h1{
     padding: 10px 0;
   }
 }

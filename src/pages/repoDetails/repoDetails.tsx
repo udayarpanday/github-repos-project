@@ -7,7 +7,7 @@ import { userRepoAsync } from "../../store/reducer";
 import "./repoDetails.scss";
 import { Link } from "react-router-dom";
 import { MdArrowBackIosNew } from "react-icons/md";
-import { formatDate, } from "../../utilities/tools";
+import { formatDate } from "../../utilities/tools";
 
 const RepoDetails = () => {
   const dispatch = useAppDispatch();
@@ -20,13 +20,13 @@ const RepoDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    //get the user and repo details selected by the using 
+    //get the user and repo details selected by the using
     dispatch(userRepoAsync({ userName: params.username, repo: params.repo }));
   }, []);
 
-  const routeToHome=()=>{
-    navigate({ pathname: "/"});
-  }
+  const routeToHome = () => {
+    navigate({ pathname: "/" });
+  };
 
   return (
     <>
@@ -41,15 +41,13 @@ const RepoDetails = () => {
                 </div>
                 <div className="user-info">
                   <div className="user-name">
-                    <h3>{userRepo.owner.login}</h3>
+                    <h1>{userRepo.owner.login}</h1>
                   </div>
                   <div className="user-link">
-                    <Link
-                      to={{ pathname: `/${userRepo.html_url}` }}
-                      target="_blank"
-                    >
+                    <a href={`${userRepo.html_url}`} 
+                    target="_blank">
                       {userRepo.html_url}
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -57,7 +55,7 @@ const RepoDetails = () => {
             <div className="repo-cards">
               <div className="users-repos=section">
                 <div className="section-title flex">
-                  <button className="back-button" onClick={()=>routeToHome()}>
+                  <button className="back-button" onClick={() => routeToHome()}>
                     <MdArrowBackIosNew />
                   </button>
                   <h3>Repository Details</h3>
