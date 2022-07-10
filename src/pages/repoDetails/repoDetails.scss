@@ -7,11 +7,25 @@
       width: 30%;
       &:last-child {
         width: 70%;
+        min-height: 460px;
       }
-      h5{
+      h5 {
         padding: 0;
       }
     }
+  }
+}
+
+.user-details-section{
+  text-align: center;
+  .user-image{
+    img{
+      border-radius: 50%;
+      border: 2px solid $primaryGrayColor;
+    }
+  }
+  h3{
+    padding: 10px 0;
   }
 }
 
@@ -21,15 +35,21 @@
     font-size: 16px;
     padding: 10px 0;
   }
-  .repo-header{
-    .flex{
-      gap:20px
+  .repo-header {
+    .flex {
+      gap: 20px;
     }
   }
 }
 
-.section-title{
-  h3{
+.section-title {
+  h3 {
     padding-left: 10px;
   }
+}
+
+.back-button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
 }

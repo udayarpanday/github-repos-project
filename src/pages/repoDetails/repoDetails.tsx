@@ -57,7 +57,7 @@ const RepoDetails = () => {
             <div className="repo-cards">
               <div className="users-repos=section">
                 <div className="section-title flex">
-                  <button className="searchButton" onClick={()=>routeToHome()}>
+                  <button className="back-button" onClick={()=>routeToHome()}>
                     <MdArrowBackIosNew />
                   </button>
                   <h3>Repository Details</h3>
