@@ -1,0 +1,92 @@
+@import "../../styles/common";
+@import "../../styles/_variable";
+
+.main-container {
+  .flex-container {
+    @include common-flex(space-between, start);
+    gap: 30px;
+  }
+  .actions-container {
+    width: 35%;
+    position: sticky;
+    top: 120px;
+    z-index:9;
+  }
+}
+.repo-count-container {
+  padding-bottom: 10px;
+  border-bottom: 2px solid $primaryGrayColor;
+  &.flex-container {
+    @include common-flex(center);
+  }
+}
+.flex-container {
+  @include common-flex();
+}
+
+.home-container {
+  padding: 25px 0;
+  .flex-container {
+    @include common-flex(center);
+  }
+}
+.search-details {
+  padding: 15px 0;
+  width: 100%;
+}
+.repo-cards {
+  padding: 15px 35px;
+  border: 2px solid $primaryGrayColor;
+  box-shadow: 0px 5px 8px 2px #e5e5e5;
+  &.text-center {
+    text-align: center;
+  }
+  h5 {
+    padding-bottom: 10px;
+  }
+  .repo-details {
+    position: relative;
+    .icon-position {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0px;
+      transform: translate(-150%, 20%);
+    }
+    h5 {
+      color: $primaryBlueColor;
+      padding-bottom: 10px;
+    }
+    p {
+      padding: 10px 0;
+    }
+  }
+  .repo-sub-details {
+    .flex-container {
+      @include common-flex(flex-start);
+      gap: 30px;
+      span {
+        display: flex;
+        align-items: center;
+        svg {
+          font-size: 24px;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}
+.actions {
+ 
+}
+.input-container {
+  h4 {
+    padding-right: 15px;
+  }
+  button {
+    cursor: pointer;
+    margin-left: -38px;
+    border: none;
+    background: transparent;
+  }
+}

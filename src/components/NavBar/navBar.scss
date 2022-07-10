@@ -1,0 +1,17 @@
+@import '../../styles/_variable';
+@import '../../styles/common';
+
+.navbar-container{
+    @include common-flex(center);
+    padding: 15px 32px;
+    background-color: $primaryBlackColor;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    .navbar-logo{
+        h3{
+            padding-left: 15px;
+        }
+    }
+}
