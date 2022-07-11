@@ -3,11 +3,11 @@
 
 .repo-user-section {
   .flex-container {
+   @include common-flex(space-between,normal);
     .repo-cards {
       width: 30%;
       &:last-child {
         width: 70%;
-        min-height: 470px;
       }
       h5 {
         padding: 0;
